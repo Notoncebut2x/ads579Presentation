@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/creative.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+			
+				<section data-background="img/title.jpg">
+					<div id = 'titlebkgrnd'>
+						<h1>USAID's new geographic data policy</h1>
+						<h3 style="text-align:left;background-color: #B3D3E8; color:white;padding:10px">Creative Development Lab August 8th, 2019 </h3>
+					</div>
+				</section>
+				<section>
+					<h3>ADS 579 governs USAID's data policy.  It has recently been updated with supplemental guidance on collecting geographic data.  This deck will help explain the new guidance to insure Creative remains in full compliance with USAID's policies. </h3>
+				</section>
+				<section>
+					<h2>What is new?</h2>
+					<table style="width:100%; background-color:#B3D3E8;">
+						<tr>
+							<th>Policy</th>
+							<th>Guidance</th>
+							<th>Standards</th>
+						</tr>
+						<tr>
+							<td><a href="https://www.usaid.gov/sites/default/files/documents/15396/579mab.pdf" target="_blank"><img src="img/ads579_policy.png" alt ="Policy Pic" width=80%></a></td>
+							<td><a href="https://usaidlearninglab.org/sites/default/files/resource/files/cleared_-_ah_-_geographic_disaggregation.pdf" target="_blank"><img src="img/ads579_guidance.png" alt ="Guidance Pic"  width=80%></a></td>
+							<td><a href="https://www.usaid.gov/sites/default/files/documents/15396/579saa.pdf" target="_blank"><img src="img/ads579_standards.png" alt ="Standards Pic" width=80%></td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h2>The Policy</h2>
+					<h3><i>USAID Operating Units (OUs) will collect Activity Location Data at the most detailed geographic level appropriate for each activity they implement using one of the four Levels of Geographic Detail...</i></h3>
+				</section>
+				<section>
+					<h3>At a <u>minimum</u>, collect Activity Location Data at the following Level of Geographic Detail:</h3>
+					<h4><b>Sub-national level activities:</b> Administrative Unit 1 level, e.g., region, province, department.</h4>
+					<h4><b>National & Regional Activities:</b> Use the Lat/Long coordinates of the Administrative 1 (i.e. country) capital city.</h4>
+				</section>
+				<section>
+					<img style="text-align:center;" src="img/Artboard 2.png" width=100%>
+				</section>
+				<section>
+						<h2>Creative's Responsibility</h2>
+							<h4>First, follow all rules as laid out in contracts, grants, and cooperative agreements.  This take precedence over anything else!</h4>	
+							<h4>However ADS 579 states that: <i>USAID contractors and recipients of USAID assistance awards must submit Datasets governed by this policy, and supporting documentation, to the DDL in accordance with the clause or provision in their award.</i></h4>
+				</section>
+				<section>
+					<h2>Beneficary Location vs Activity Location</h2>
+					<h4>USAID OUs are required to collect Activity Location Data depicting the geographic location where an activity is implemented. In some cases, an activity’s “Location of Implementation” may be different than its “Location of Intended Beneficiaries” and therefore it may be useful to collect geographic data depicting both types of locations. </h4>
+				</section>
+		
+				<section>
+					<h1>Edge Case Quiz</h1>
+				</section>
+				<section>
+					<h4>1. If a project in Syria sponsors a training for local councils in Istanbul.  What location should be captured for the project?</h4>
+				</section>
+				<section>
+					<h4> Answer: Istanbul, Turkey since this is where the training activity took place.  Recording the location where the Local Council is based would be considered the <i>beneficary location</i> which is only necessary if mandated by the CO/COR</h4>
+				</section>
+				<section>
+					<h4>2. The NRTI/NERI program in Nigeria had projects supporting radio stations that covered Kano State, what location(s) should be captured?</h4>
+				</section>
+				<section>
+					<h3> Answer:  This one is a bit trickier, but, considering the four geographic levels, the recommended level would be the populated place where the station is located.  This captures enough detail without revealing the exact location of the station.</h3>
+				</section>
+
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
